@@ -22,4 +22,20 @@ public class Lotto {
         return lottoNumbers.toString();
     }
 
+    public int countMatch(WinningNumbers winningNumbers) {
+        int matchCount = 0;
+        for (int number : lottoNumbers) {
+            matchCount += matchScore(number, winningNumbers);
+        }
+        return matchCount;
+    }
+
+    private int matchScore(int number, WinningNumbers winningNumbers) {
+        if (winningNumbers.contains(number)) {
+            return 1;
+        }
+        return 0;
+    }
+
+
 }
