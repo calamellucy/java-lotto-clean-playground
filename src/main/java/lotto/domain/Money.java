@@ -1,8 +1,8 @@
 package lotto.domain;
 
-public class PurchaseAmount {
+public class Money {
 
-    public PurchaseAmount() {
+    public Money() {
     }
 
     public int calculateNumberOfLottos(int money) {

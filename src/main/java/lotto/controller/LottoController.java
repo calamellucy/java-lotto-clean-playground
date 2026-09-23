@@ -3,7 +3,7 @@ package lotto.controller;
 import java.util.List;
 import lotto.domain.LottoNumberGenerator;
 import lotto.domain.Lottos;
-import lotto.domain.PurchaseAmount;
+import lotto.domain.Money;
 import lotto.domain.WinningNumbers;
 import lotto.domain.WinningStatistics;
 import lotto.view.InputView;
@@ -13,7 +13,7 @@ public class LottoController {
 
     public void run(){
         int money = InputView.inputMoney();
-        int count = new PurchaseAmount().calculateNumberOfLottos(money);
+        int count = new Money().calculateNumberOfLottos(money);
         Lottos lottos = Lottos.generate(count, new LottoNumberGenerator());
         OutputView.printLottos(lottos);
 
