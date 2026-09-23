@@ -5,7 +5,9 @@
 ```
 src/main/java/lotto
 ├── Application.java              # JVM 실행 진입점(main 메서드), LottoController 실행만 함
-├── LottoController.java          # 입력→계산→생성→출력 흐름 조립
+│
+├── controller
+│   └── LottoController.java       # 입력→계산→생성→출력 흐름 조립
 │
 ├── domain
 │   ├── Lotto.java                 # 번호 6개를 담는 로또 한 장 (값객체)
