@@ -13,7 +13,7 @@ public class LottoController {
 
     public void run(){
         int money = InputView.inputMoney();
-        int count = new Money().calculateNumberOfLottos(money);
+        int count = new Money(money).calculateNumberOfLottos();
         Lottos lottos = Lottos.generate(count, new LottoNumberGenerator());
         OutputView.printLottos(lottos);
 
